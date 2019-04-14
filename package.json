@@ -24,5 +24,8 @@
   "homepage": "https://github.com/CrSjimo/awesome-math-proof#readme",
   "dependencies": {
     "commander": "^2.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.4"
   }
 }

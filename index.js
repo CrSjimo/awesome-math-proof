@@ -1,4 +1,4 @@
-const rpl = [
+const rplG = [
 	'易证',
 	'显然',
 	'=>',
@@ -7,7 +7,6 @@ const rpl = [
 	'可得',
 	'可知',
 	'故',
-	'∴'
 ];
 const normalTarget = '∴';
 const TeXTarget = '\\therefore';
@@ -19,7 +18,9 @@ function getRandItem(arr){
 	return arr[index];
 }
 function mathProof(originStr,enableTeX){
+	const rpl = [...rplG];
 	let target = enableTeX ? TeXTarget : normalTarget;
+	rpl.push(target);
 	let thereforeSplit = originStr.split(target);
 	let result = '';
 	for(str of thereforeSplit.slice(0,thereforeSplit.length-1)){
@@ -28,4 +29,4 @@ function mathProof(originStr,enableTeX){
 	result += thereforeSplit[thereforeSplit.length - 1];
 	return result;
 }
-module.exports = {mathProof,rpl};
+module.exports = {mathProof,rplG};

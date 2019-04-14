@@ -1,0 +1,10 @@
+∵ AB = AC,
+∴ ∠B = ∠C,
+∵ AD ⊥ BC,
+∴ D为BC中点, AD平分∠BAC,
+∴ ∠1 = ∠2,
+∵ 在△BAD与△CAD中
+    ∠B = ∠C,
+    AB = AC,
+    ∠1 = ∠2,
+∴ △BAD ≌ △CAD (ASA)
