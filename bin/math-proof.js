@@ -28,7 +28,9 @@ if(outputPath === true){
 // if(!encoding){
 // 	encoding = 'utf-8';
 // }
-/let extName = inputPath.replace(fileExt);
+let extName = inputPath.replace(fileExt,'').toLowerCase();
+//console.log(extName);
+enableTeX = (extName === 'tex');
 fs.readFile(inputPath,(err,data) => {
 	if(err){
 		console.log(`\u001b[31m${err.message}`);
