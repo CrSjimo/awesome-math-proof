@@ -13,6 +13,7 @@ let inputPath = commander.path;
 let outputPath = commander.output;
 // console.log(outputPath);
 // let encoding = commander.encoding;
+let fileExt = /.+\./;
 let enableTeX = commander.tex;
 if(!inputPath){
 	commander.outputHelp();
@@ -27,6 +28,7 @@ if(outputPath === true){
 // if(!encoding){
 // 	encoding = 'utf-8';
 // }
+/let extName = inputPath.replace(fileExt);
 fs.readFile(inputPath,(err,data) => {
 	if(err){
 		console.log(`\u001b[31m${err.message}`);
@@ -38,8 +40,10 @@ fs.readFile(inputPath,(err,data) => {
 		console.log(ans);
 	}else{
 		fs.writeFile(outputPath,ans,(err) => {
-			console.log(`\u001b[31m${err.message}`);
-			process.exit(1);
+			if(err){
+				console.log(`\u001b[31m${err.message}`);
+				process.exit(1);
+			}
 		});
 	}
 });
