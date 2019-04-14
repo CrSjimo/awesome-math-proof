@@ -1,0 +1,28 @@
+{
+  "name": "awesome-math-proof",
+  "version": "0.0.1",
+  "description": "Make math proof(in Chinese) more professional",
+  "main": "index.js",
+  "bin": {
+    "math-proof": "./bin/math-proof.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrSjimo/awesome-math-proof.git"
+  },
+  "keywords": [
+    "Math"
+  ],
+  "author": "Crindzebra Sjimo",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/CrSjimo/awesome-math-proof/issues"
+  },
+  "homepage": "https://github.com/CrSjimo/awesome-math-proof#readme",
+  "dependencies": {
+    "commander": "^2.20.0"
+  }
+}
